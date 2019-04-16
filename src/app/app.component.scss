@@ -1,0 +1,54 @@
+$white: #FFFFFF;
+$black: #000000;                    
+$curious-blue: #3276B3;
+$concrete: #F3F3F3;
+$dark-gray: #A9A9A8;
+$monson: #777777;
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/deep/ .fc-view-container {
+
+  .fc-head-container > .fc-widget-header {
+    background-color: $curious-blue;
+  
+    span {
+      color: $white;
+    }
+  }
+
+  .fc-day-header {
+    border: none !important;
+  }
+
+  .fc-day.fc-widget-content {
+    border-color: $monson;
+  }
+
+  .fc-day.fc-sat,
+  .fc-day.fc-sun {
+    background-color: $concrete;
+  }
+
+  .fc-day-top .fc-day-number {
+    color: $black;
+    font-weight: bold !important;
+    float: left !important;
+  }
+
+  .fc-day-top.fc-sun,
+  .fc-day-top.fc-sun {
+
+    .fc-day-number {
+      color: $curious-blue;
+    }
+
+    &.fc-other-month .fc-day-number {
+      color: $dark-gray;
+    }
+  }
+}
